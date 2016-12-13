@@ -1,0 +1,8 @@
+device
+fs
+lib
+sys
+.
+kernel
+bin/boot/grub
+dev
