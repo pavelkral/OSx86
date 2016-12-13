@@ -61,20 +61,12 @@ obj/terminal.o:lib/terminal.c
 	$(COMPILER) $(CFLAGS) lib/terminal.c -o obj/terminal.o
 
 build:all
-	#Activate the install xorr if you do not have it already installed
+	#Activate the install xorriso if you do not have it already installed
 	#sudo apt-get install xorriso
-	#rm bin/boot/grub/ -r -f
-	#mkdir bin/boot/grub/
-	#echo set default=0 >> bin/boot/grub/grub.cfg
-	#echo set timeout=0 >> bin/boot/grub/grub.cfg
-	#echo menuentry "Core Os" { >> bin/boot/grub/grub.cfg
-	#echo         set root='(hd96)' >> iknow/boot/grub/grub.cfg
-	#echo         multiboot /boot/kernel.bin >> iknow/boot/grub/grub.cfg
-	#echo } >> bin/boot/grub/grub.cfg
 
 	grub-mkrescue -o osx86.iso bin/
 	
-clear:
+clean:
 	rm -f obj/*
 	rm -r -f bin/boot/osx86.bin
 	
